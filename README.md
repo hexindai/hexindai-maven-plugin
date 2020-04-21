@@ -64,7 +64,7 @@ How to use?
 
 This command is too long. Like short? Add the following to your `~/.m2/settings.xml` file.
 
-```xml
+```diff
  <pluginGroups>
 +    <pluginGroup>com.github.hexindai.maven.plugins</pluginGroup>
  </pluginGroups>

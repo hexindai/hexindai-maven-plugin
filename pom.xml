@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugins</artifactId>
+        <version>34</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.github.hexindai.maven.plugins</groupId>
+    <artifactId>hexindai-maven-plugin</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>maven-plugin</packaging>
+
+    <name>Hexindai Maven Plugin</name>
+    <description>Hexindai maven plugin is used to make developer happy.</description>
+    <inceptionYear>2020</inceptionYear>
+
+    <contributors>
+        <contributor>
+            <name>Runrioter Wung</name>
+            <email>runrioter@gmail.com</email>
+            <roles>
+                <role>leader</role>
+            </roles>
+        </contributor>
+    </contributors>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <mavenVersion>3.0</mavenVersion>
+        <s3harding-core.version>0.0.8</s3harding-core.version>
+    </properties>
+
+    <scm>
+        <connection>scm:git:https://github.com/hexindai/hexindai-maven-plugin.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:hexindai/hexindai-maven-plugin.git</developerConnection>
+        <url>https://github.com/hexindai/hexindai-maven-plugin</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>${mavenVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.hexindai.s3harding</groupId>
+            <artifactId>s3harding-core</artifactId>
+            <version>${s3harding-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugin-tools</groupId>
+            <artifactId>maven-plugin-annotations</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

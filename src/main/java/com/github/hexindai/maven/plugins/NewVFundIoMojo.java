@@ -19,7 +19,7 @@ package com.github.hexindai.maven.plugins;
  * under the License.
  */
 
-import com.github.hexindai.s3harding.core.MurmurHashSharding;
+import com.github.hexindai.s3harding.core.ConfigurableSharding;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -29,7 +29,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 import java.util.Properties;
 
 /**
- * Goal which generate newvfundio tablename using user id.
+ * Goal which generates newvfundio tablename with user id.
  */
 @Mojo( name = "newvfundio" )
 public class NewVFundIoMojo extends AbstractMojo
@@ -43,7 +43,7 @@ public class NewVFundIoMojo extends AbstractMojo
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException
     {
-        final MurmurHashSharding murmurHashSharding = new MurmurHashSharding();
+        final ConfigurableSharding murmurHashSharding = new GeneralSharding();
 
         if ( properties == null )
         {

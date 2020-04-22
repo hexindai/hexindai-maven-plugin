@@ -35,6 +35,19 @@ under the License.
     <description>Hexindai maven plugin is used to make developer happy.</description>
     <inceptionYear>2020</inceptionYear>
 
+    <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <name>Central Repository OSSRH</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>ossrh-snapshot</id>
+            <name>Central Repository OSSRH SNAPSHOT</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <contributors>
         <contributor>
             <name>Runrioter Wung</name>

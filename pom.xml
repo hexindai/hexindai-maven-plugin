@@ -28,7 +28,7 @@ under the License.
 
     <groupId>com.github.hexindai.maven.plugins</groupId>
     <artifactId>hexindai-maven-plugin</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <packaging>maven-plugin</packaging>
 
     <name>Hexindai Maven Plugin</name>
@@ -42,7 +42,7 @@ under the License.
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
         <snapshotRepository>
-            <id>ossrh-snapshot</id>
+            <id>ossrh</id>
             <name>Central Repository OSSRH SNAPSHOT</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>

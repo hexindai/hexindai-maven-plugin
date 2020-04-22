@@ -61,7 +61,7 @@ How to use?
 2. Run this plugin
 
 ```shell script
-./mvnw com.github.hexindai.maven.plugins:hexindai-maven-plugin:0.0.1-SNAPSHOT:newvfundio -Duserid=148407
+./mvnw com.github.hexindai.maven.plugins:hexindai-maven-plugin:0.0.1:newvfundio -Duserid=148407
 ```
 
 This command is too long. Like short? Add the following to your `~/.m2/settings.xml` file.

@@ -18,6 +18,8 @@
 Hexindai Maven Plugin
 ======
 
+[![Github Workflows](https://github.com/hexindai/hexindai-maven-plugin/workflows/ci-with-maven/badge.svg)](https://github.com/hexindai/hexindai-maven-plugin/actions?query=workflow%3Aci-with-maven)
+
 A Maven plugin. **Work in progress**
 
 Will add many features. Just wait. Thank you.
@@ -27,34 +29,34 @@ How to use?
 1. Add this plugin to you pom.xml
 ```xml
 <build>
-        <plugins>
-            <plugin>
-                <groupId>com.github.hexindai.maven.plugins</groupId>
-                <artifactId>hexindai-maven-plugin</artifactId>
-                <version>0.0.1</version>
-                <configuration>
-                    <properties>
-                        <property>
-                            <name>tableNamePrefix</name>
-                            <value>New_V_FundIO_</value>
-                        </property>
-                        <property>
-                            <name>shardingCount</name>
-                            <value>512</value>
-                        </property>
-                        <property>
-                            <name>seed</name>
-                            <value>12341234</value>
-                        </property>
-                        <property>
-                            <name>numOfNodesPerTable</name>
-                            <value>5</value>
-                        </property>
-                    </properties>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <plugins>
+        <plugin>
+            <groupId>com.github.hexindai.maven.plugins</groupId>
+            <artifactId>hexindai-maven-plugin</artifactId>
+            <version>0.0.1</version>
+            <configuration>
+                <properties>
+                    <property>
+                        <name>tableNamePrefix</name>
+                        <value>New_V_FundIO_</value>
+                    </property>
+                    <property>
+                        <name>shardingCount</name>
+                        <value>512</value>
+                    </property>
+                    <property>
+                        <name>seed</name>
+                        <value>12341234</value>
+                    </property>
+                    <property>
+                        <name>numOfNodesPerTable</name>
+                        <value>5</value>
+                    </property>
+                </properties>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 ```
 2. Run this plugin
 

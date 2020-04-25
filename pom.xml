@@ -63,6 +63,7 @@ under the License.
         <maven.compiler.target>1.8</maven.compiler.target>
         <mavenVersion>3.0</mavenVersion>
         <s3harding-core.version>0.0.8</s3harding-core.version>
+        <junit-jupiter.version>5.6.2</junit-jupiter.version>
     </properties>
 
     <scm>
@@ -86,6 +87,12 @@ under the License.
             <groupId>org.apache.maven.plugin-tools</groupId>
             <artifactId>maven-plugin-annotations</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

@@ -36,14 +36,13 @@ public class GeneralSharding extends MurmurHashSharding
         final String tableName = getTableName( shardKey );
         if ( tableName != null )
         {
-            return tableName;
+            return getProperty( "tableNamePrefix" ) + tableName;
         }
         return super.getShardingTableName( shardKey );
     }
 
     private String getTableName( String shardKey )
     {
-        String prefix = (String) getProperty( "tableNamePrefix" );
         Map<String, String> map = new HashMap<String, String>()
         {{
             put( "0", "0" );
@@ -56,6 +55,6 @@ public class GeneralSharding extends MurmurHashSharding
             put( "80", "Reserve" );
             put( "90", "Reward" );
         }};
-        return map.get( shardKey ) == null ? null : prefix + map.get( shardKey );
+        return map.get( shardKey );
     }
 }

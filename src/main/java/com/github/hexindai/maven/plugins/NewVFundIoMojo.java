@@ -43,7 +43,7 @@ public class NewVFundIoMojo extends AbstractMojo
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException
     {
-        final ConfigurableSharding murmurHashSharding = new GeneralSharding();
+        final ConfigurableSharding sharding = new GeneralSharding();
 
         if ( properties == null )
         {
@@ -56,8 +56,8 @@ public class NewVFundIoMojo extends AbstractMojo
             }};
         }
 
-        murmurHashSharding.setProperties( properties );
-        final String tableName = murmurHashSharding.getShardingTableName( userId );
+        sharding.setProperties( properties );
+        final String tableName = sharding.getShardingTableName( userId );
         getLog().info( String.format( "Sharding Table Name: <<<%s>>>", tableName ) );
     }
 }

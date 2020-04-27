@@ -30,6 +30,19 @@ import java.util.Map;
 public class GeneralSharding extends MurmurHashSharding
 {
 
+    private final static Map<String, String> SPECIAL_TABLE_NAME_MAP = new HashMap<String, String>()
+    {{
+        put( "0", "0" );
+        put( "20", "G_1" );
+        put( "30", "Sys" );
+        put( "40", "Repurchase" );
+        put( "50", "Advance" );
+        put( "60", "Balance" );
+        put( "70", "Payment" );
+        put( "80", "Reserve" );
+        put( "90", "Reward" );
+    }};
+
     @Override
     public String getShardingTableName( String shardKey )
     {
@@ -43,18 +56,6 @@ public class GeneralSharding extends MurmurHashSharding
 
     private String getTableName( String shardKey )
     {
-        Map<String, String> map = new HashMap<String, String>()
-        {{
-            put( "0", "0" );
-            put( "20", "G_1" );
-            put( "30", "Sys" );
-            put( "40", "Repurchase" );
-            put( "50", "Advance" );
-            put( "60", "Balance" );
-            put( "70", "Payment" );
-            put( "80", "Reserve" );
-            put( "90", "Reward" );
-        }};
-        return map.get( shardKey );
+        return SPECIAL_TABLE_NAME_MAP.get( shardKey );
     }
 }
